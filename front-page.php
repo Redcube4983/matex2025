@@ -136,7 +136,7 @@ Template Name: front-page
             <img src="<?php echo get_template_directory_uri(); ?>/images/front-page/aboutSteel-image.webp" alt="">
         </div>
         <div class="business-text-area animate-right">
-        <h2 class="business-title">Movie</h2>
+        <h2 class="business-title">Movieeee</h2>
         <p class="business-text">鉄は、古くから私たち人類の<br class="tab"><br class="pc">
            文明発展を支えてきました。<br>
            そして、現在もなお、社会や<br class="tab"><br class="pc">
