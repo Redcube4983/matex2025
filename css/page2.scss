@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+@use '../common/css/Layout/main';
+
+
+$color: #e95522;
+
+
+#workSub {
+    padding: 60px 15px 0;
+    @media screen and (min-width:768px){
+    padding: 60px 40px 0;
+    font-size: 1.4rem;
+    }
+    @media screen and (min-width:960px){
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+    img {
+        width: 100%;
+    }
+    .jobLeadWrap {
+        span {
+            font-size: 1.6rem;
+            position: relative;
+            color: $color;
+            padding-left: 25px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                left: 0;
+                top: 8px;
+                background-color: $color;
+                
+            }
+            @media screen and (min-width:768px){
+                font-size: 1.8rem;
+            }
+        }
+        h4 {
+            font-size: 2rem;
+            padding-top: 20px;
+            @media screen and (min-width:920px){
+                font-size: 2.2rem;
+            }
+          }
+    }
+}
+
+.profileWrap {
+    padding: 20px;
+    margin-top: 20px;
+    border: solid 1px #c5c5c5;
+    text-align: justify;
+    @media screen and (min-width:768px){
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rightWrap {
+        @media screen and (min-width:768px){
+            display: flex;
+            flex-flow: column;
+            justify-content: end;
+            width: 50%;
+        }
+        @media screen and (min-width:920px){
+            display: flex;
+            flex-flow: column;
+            justify-content: end;
+        }
+    }
+    h3 {
+        font-size: 1.8rem;
+        padding-top: 10px;
+        @media screen and (min-width:768px){
+            font-size: 2rem;
+        }
+        @media screen and (min-width:960px){
+            font-size: 3rem;
+        }
+      }
+    .img {
+        @media screen and (min-width:768px){
+            width: 45%;
+        }
+    }
+    h5 {
+        font-size: 1.6rem;
+        @media screen and (min-width:768px){
+            font-size: 1.8rem;
+        }
+        @media screen and (min-width:960px){
+            padding-top: 10px;
+            font-size: 2rem;
+        }
+    }
+    span {
+        font-size: 1.4rem;
+        @media screen and (min-width:960px){
+            font-size: 1.6rem;
+        }
+      }
+    p {
+        @media screen and (min-width:768px){
+            margin: 0;
+        }
+        @media screen and (min-width:920px){
+            padding-top: 10px;
+            font-size: 1.8rem;
+        }
+    }
+  }
+
+@mixin paddingTop30 {
+    padding-top: 30px;
+}
+
+
+  #QAwrap {
+    @include paddingTop30();
+    text-align: justify;
+    @media screen and (min-width:920px){
+        padding-top: 60px;
+    }
+    li {
+        padding-top: 50px;
+        @media screen and (min-width:920px){
+            padding-top: 80px;
+        }
+      }
+    h3 {
+        font-size: 1.3rem;
+        color: $color;
+        @media screen and (min-width:920px){
+            font-size: 1.8rem;
+        }
+      }
+    p {
+        padding-top: 5px;
+        @media screen and (min-width:920px){
+            font-size: 1.8rem;
+        }
+    }
+    .img {
+        @include paddingTop30();
+        @media screen and (min-width:768px){
+            padding-top: 60px;
+        }
+        @media screen and (min-width:920px){
+            padding: 0;
+        }
+    }
+    .inner {
+        @media screen and (min-width:920px){
+            display: flex;
+            justify-content: space-between;
+            flex-flow: column;
+        }
+    }
+    .leftWrap {
+        @media screen and (min-width:768px){
+        width: 100%;
+        ul {
+            width: 70%;
+          }
+        }
+    }
+    .rightWrap {
+        @media screen and (min-width:768px){
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            flex-flow: wrap;
+            padding-top: 70px;
+            ul {
+                width: 70%;
+            }
+        }
+        
+    }
+}
+
+.intoWrap {
+    @media screen and (min-width:768px){
+        width: 70%;
+    }
+    @media screen and (min-width:920px){
+    }
+  }
+
+#lastWrap {
+    padding-top: 70px;
+    img {
+        width: 100%;
+      }
+      @media screen and (min-width:920px){
+        padding-top: 100px;
+        max-width: 1500px;
+      }
+  }

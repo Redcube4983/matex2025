@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@use '../common/css/Layout/main';
+
+@mixin padding {
+    padding: 60px 15px 0;
+    @media screen and (min-width:768px){
+      padding: 60px 40px 0;
+      font-size: 1.4rem;
+    }
+    @media screen and (min-width:960px){
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+}
+
+#networkInner {
+    @include padding();
+    .textWrap {
+    h3 {
+        font-size: 2rem;
+        @media screen and (min-width:960px){
+            font-size: 2.4rem;
+        }
+    }
+    p {
+        padding-top: 10px;
+        margin-top: 10px;
+        border-top: solid 1px #c5c5c5;
+        font-size: 1.4rem;
+        @media screen and (min-width:960px){
+            font-size: 1.8rem;
+        }
+      }
+    li:not(:first-child) {
+        padding-top: 30px;
+    }
+    }
+    .position {
+        padding-top: 30px;
+        @media screen and (min-width:768px){
+            overflow-x: inherit;
+            width: 100%;
+            padding-top: 60px;
+        }
+      }
+}
+.mapImg {
+    padding-top: 30px;
+    @media screen and (min-width:768px){
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+    @media screen and (min-width:960px){
+        width: 48%;
+        margin: 0;
+        padding-top: 0;
+    }
+  }
+.stateImgWrap {
+    img {
+        width: 100%;
+    }
+    ul {
+        display: flex;
+        flex-flow: wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+  }
+
+.stateImgWrap {
+    padding-top: 30px;
+    @media screen and (min-width:960px){
+        display: flex;
+        justify-content: space-between;
+        padding-top: 60px;
+    }
+}
+
+.stateImgWrap1 {
+    display: flex;
+    .img1 {
+        padding-right: 10px;
+    }
+    @media screen and (min-width:960px){
+        padding: 0;
+        .img2 {
+            padding-right: 10px;
+        }
+    }
+}
+.stateImgWrap2 {
+    display: flex;
+    padding-top: 5px;
+    @media screen and (min-width:960px){
+        padding: 0;
+    }
+    .img3 {
+        padding-right: 10px;
+    }
+}
+
+
+.textWrap {
+    text-align: justify;
+    @media screen and (min-width:960px){
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        ul {
+            width: 48%;
+        }
+        }
+    @media screen and (min-width:1280px){
+        ul {
+            width: 48%;
+          }
+    }
+}

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@use '../common/css/Layout/main';
+
+#companyWrap {
+    padding: 60px 15px 0;
+    @media screen and (min-width:768px){
+    padding: 60px 40px 0;
+    font-size: 1.4rem;
+    }
+    @media screen and (min-width:960px){
+    max-width: 1100px;
+    margin: 0 auto;
+    }
+    h3 {
+        font-size: 1.6rem;
+        text-align: center;
+        @media screen and (min-width:768px){
+            font-size: 1.8rem;
+            }
+            @media screen and (min-width:960px){
+                font-size: 2rem;
+            }
+    }
+    p {
+        text-align: justify;
+        font-size: 1.3rem;
+        padding-top: 20px;
+        @media screen and (min-width:960px){
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+.textWrap,
+.textWrap2 {
+    padding-top: 60px;
+}
+.companyImg {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    .companyImg-inner {
+        width: 49%;
+        margin-bottom: 2%;
+        img {
+            width: 100%;
+            display: block;
+
+        }
+    }
+    @media screen and (min-width:960px){
+        .companyImg-inner {
+            width: 32%;
+        }
+    }
+  }
+
+.image {
+    padding-top: 60px;
+    @media screen and (min-width:960px){
+        width: 80%;
+        margin: 0 auto;
+    }
+}

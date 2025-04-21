@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+
+@use '../common/css/Layout/main';
+
+@mixin paddingSide {
+    width: calc(100% - 30px);
+    padding: 30px 15px;
+    margin: 0 auto;
+    @media screen and (min-width:768px){
+        width: calc(100% - 60px);
+        padding: 60px 30px;
+        max-width: 960px;
+    }  
+  }
+
+
+  .application_lead {
+    font-size: 16px;
+    text-align: center;
+    @media screen and (min-width:768px){
+      font-size: 20px;
+    }
+  }
+
+  #application_form_wrap {
+    @include paddingSide();
+  }
+
+  #error {
+    display: block;
+  }
+
+  #application_form_wrap {
+    .white_box {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+      padding: 5px;
+      color: #999;
+      position: relative;
+      box-sizing: border-box;
+      background-color: #F2F2F2;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      @media screen and (min-width:768px){
+        font-size: 20px;
+      }
+    }
+    .required {
+      font-size: 10px;
+      margin-left: 5px;
+      color: #f00;
+      font-weight: bold;
+    }
+    .option_box {
+      padding: 5px;
+      color: #999;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #F2F2F2;
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      @media screen and (min-width:768px){
+        font-size: 20px;
+      }
+    }
+    tr {
+      display: flex;
+      flex-flow: column;
+      margin-top: 30px;
+    }
+    td {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 13px;
+      font-weight: bold;
+      @media screen and (min-width:768px){
+        font-size: 18px;
+      }
+    }
+    h4 {
+      font-size: 13px;
+      margin-top: 10px;
+      @media screen and (min-width:768px){
+        font-size: 18px;
+      }
+    }
+    label {
+      display: flex;
+      flex-flow: wrap-reverse;
+    }
+    .mwform-radio-field-text {
+      font-size: 13px;
+      @media screen and (min-width:768px){
+        font-size: 18px;
+      }
+    }
+    .radio-box {
+      display: flex;
+      flex-flow: wrap;
+      margin-top: 10px;
+    }
+    .acknowledgment-check-wrap {
+      padding: 30px;
+      border: solid 1px #ffce3a;
+      border-radius: 5px;
+      font-size: 13px;
+      margin-top: 20px;
+      @media screen and (min-width:768px){
+        font-size: 18px;
+        padding: 50px;
+        margin-top: 50px;
+      }
+    }
+    .privacy-link-label {
+      font-size: 13px;
+      font-weight: bold;
+      @media screen and (min-width:768px){
+        font-size: 18px;
+      }
+    }
+    .mwform-checkbox-field.horizontal-item {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      @media screen and (min-width:768px){
+        margin-top: 20px;
+      }
+    }
+    #confirm_button_wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      @media screen and (min-width:768px){
+        margin-top: 50px;
+      }
+      .confirm_button {
+        display: flex;
+        height: 65px;
+        width: 250px;
+        justify-content: center;
+        align-items: center;
+        background-color: #e95520;
+        border: solid 1px #e95520;
+        color: #fff;
+        font-size: 16px;
+        transition: 0.2s;
+        @media screen and (min-width:768px){
+          height: 80px;
+          width: 350px;
+          font-size: 20px;
+        }
+        &:hover {
+          border: solid 1px #e95520;
+          background-color: #fff;
+          color: #e95520;
+        }
+      }
+    }
+  }
+
+
+  

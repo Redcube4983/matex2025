@@ -1,0 +1,211 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.contents{
+    width: 100%;
+}
+#main-visual .topTtlInner {
+    position: relative;
+    @media screen and (min-width:960px){
+      padding-top: 0;
+    }
+  }
+  .ttlWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    .enTtl {
+        font-size: 4rem;
+        line-height: 1;
+        font-family: "Oswald", sans-serif;
+        font-weight: 400;
+        animation: enTtl 2s ease both;
+        display: block;
+        @media screen and (min-width:960px){
+          font-size: 8rem;
+        }
+      }
+    .jpTtl {
+        font-size: 1.6rem;
+        padding-top: 10px;
+        animation: jpTtl 2s ease 1s both;
+        display: block;
+        @media screen and (min-width:768px){
+          font-size: 1.8rem;
+        }
+        @media screen and (min-width:960px){
+          font-size: 2.4rem;
+          padding-top: 20px;
+        }
+    }
+  }
+@keyframes enTtl{
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes jpTtl{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.topImg img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+#panNavi {
+  padding: 10px 15px 0;
+  a {
+    position: relative;
+    color: #000;
+    &::after {
+      position: absolute;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #000;
+      transform: scale(1, 1);
+      transform-origin: left top;
+      transition: .2s;
+      bottom: -3px;
+    }
+    &:hover::after {
+        transform: scale(1, 1);
+    }
+  }
+  .list {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 1.2rem;
+    line-height: 1;
+    width: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    word-break: break-all;
+    padding-bottom: 10px;
+    li:not(:first-child){
+      position: relative;
+      padding: 0 0 0 20px;
+      margin: 0 0 0 10px;
+    }
+    li:not(:first-child)::before{
+      content: "＞";
+      color: #000;
+      padding-left: 00px;
+      left: 0;
+      display: inline-block;
+      position: absolute;
+    }
+  }
+@media screen and (min-width:768px){
+  padding: 10px 40px 0;
+}
+@media screen and (min-width:960px){
+    position: fixed;
+    top: 60px;
+    color: #fff;
+    width: calc(100% - 60px);
+    padding: 10px 30px 10px;
+    background-color: transparent;
+    transition: background-color 1s ease-out;
+    z-index: 999;
+    a {
+      color: #fff;
+      &::after{
+        background: #fff;
+      }
+    }
+    .list {
+      padding-bottom: 0px;
+      overflow-x: visible;
+      li:not(:first-child)::before{
+      color: #fff;
+      }
+    }
+    &.white{
+      transition: background-color 1s ease-out;
+      color: #000;
+      background-color: #fff;
+      border-bottom: solid 1px #e5e5e5;
+      a {
+        color: #000;
+        &::after{
+          background: #000;
+        }
+      }
+      .list {
+        li:not(:first-child)::before{
+        color: #000;
+        }
+      }
+    }
+}
+}
+
+
+#leadWrap {
+padding: 60px 15px 0;
+@media screen and (min-width:768px){
+  padding: 60px 40px 0;
+}
+@media screen and (min-width:960px){
+  // padding: 80px 0 50px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+text-align: center;
+.enTtl {
+  font-size: 2rem;
+  color: #e95520;
+  letter-spacing: 1.5px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+.jpTtl {
+  font-size: 2rem;
+  @media screen and (min-width:960px){
+    font-size: 2.2rem;
+  }
+  @media screen and (min-width:1280px){
+    font-size: 2.4rem;
+  }
+}
+p {
+    font-size: 1.3rem;
+    line-height: 2;
+    text-align: justify;
+    padding-top: 20px;
+    @media screen and (min-width:768px){
+      font-size: 1.4rem;
+    }
+  @media screen and (min-width:960px){
+    font-size: 1.8rem;
+    max-width: 1100px;
+  }
+}
+.textCenter {
+  text-align: left;
+  @media screen and (min-width:960px){
+    text-align: center;
+  }
+}
+}
+
+.innerWrap1 {
+display: flex;
+justify-content: space-between;
+}
+

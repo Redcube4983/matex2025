@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+@use '../common/css/Layout/main';
+
+
+
+.logoWrap {
+    .logo {
+        width: 85%;
+        margin: 0 auto;
+        padding-top: 20px;
+        max-width: 300px;
+      }
+      @media screen and (min-width:960px){
+        display: flex;
+        justify-content: space-between;
+        .logo {
+          width: 200px;
+          max-width: 1100px;
+          margin-right: 60px;
+        }
+      }
+}
+#leadWrap {
+  @media screen and (min-width:960px){
+    p {
+      width: calc(100% - 200px);
+    }
+  }
+}
+#outline {
+    font-size: 1.3rem;
+    line-height: 1;
+    .contentsTtl:not(:first-child) {
+      padding-top: 60px;
+    }
+    padding: 60px 15px 0;
+    @media screen and (min-width:768px){
+      padding: 60px 40px 0;
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width:960px){
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+}
+.contentsTtl {
+    font-size: 2rem;
+    color: #e95520;
+    letter-spacing: 1px;
+    @media screen and (min-width:768px){
+      font-size: 2.2rem;
+    }
+    @media screen and (min-width:960px){
+      font-size: 2.4rem;
+    }    
+}
+
+
+
+@mixin p-top20px {
+  padding-top: 20px;
+}
+@mixin p-top60px {
+  padding-top: 60px;
+  display: block;
+}
+@mixin p-20pxNotRight {
+  padding: 20px 0 20px 20px;
+  @media screen and (min-width:960px){
+    padding: 30px 0 30px 30px;
+  }
+}
+@mixin borderTopStyle {
+  border-top: solid 1px #c5c5c5;
+}
+@mixin borderBottomStyle {
+  border-bottom: solid 1px #c5c5c5;
+}
+@mixin borderDotted {
+  border-top: dotted 1px #b5b5b5
+}
+
+#overview {
+  tbody {
+    @include borderBottomStyle();
+    display: block;
+  }
+  table {
+    letter-spacing: 1px;
+    @include p-top20px();
+  }
+  tr {
+    display: flex;
+    flex-flow: column;
+    @media screen and (min-width:960px){
+      display: table;
+      width: 100%;
+      @include p-20pxNotRight();
+      @include borderTopStyle();
+      &:nth-child(odd){
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  th {
+    @include p-20pxNotRight();
+    @include borderTopStyle();
+    background-color: #f5f5f5;
+    @media screen and (min-width:960px){
+      border-top: none;
+      background-color: inherit;
+      padding: 0;
+      width: 200px;
+    }
+
+  }
+  td {
+    padding: 20px 20px 20px;
+    @include borderDotted();
+    @media screen and (min-width:960px){
+      padding: 0;
+      border: none;
+      width: auto;
+    }
+  }
+}
+
+#businessItems {
+  @include p-top60px();
+  ul {
+    @include p-top20px();
+    @include borderBottomStyle();
+    letter-spacing: 1px;
+  }
+  li {
+    @include p-20pxNotRight();
+    @include borderTopStyle();
+    @media screen and (min-width:960px){
+      &:nth-child(odd){
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+#history {
+  @include p-top60px();
+  .contents {
+    line-height: 1.6;
+  }
+  ul {
+    @include p-top20px();
+    @include borderBottomStyle();
+  }
+  .ad-monthWrap {
+    @include p-20pxNotRight();
+    @include borderTopStyle();
+    background-color: #f5f5f5;
+    @media screen and (min-width:960px){
+      padding: 0;
+      background-color: inherit;
+      border: none;
+      display: flex;
+      align-items: center;
+      width: 200px;
+      .ad {
+        padding-right: 10px;
+      }
+    }
+  }
+  p {
+    padding: 20px 20px 20px;
+    @include borderDotted();
+    letter-spacing: 1px;
+    @media screen and (min-width:768px){
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width:960px){
+      padding: 0;
+      border: none;
+      width: auto;
+      margin: 0;
+    }
+  }
+  li {
+    @media screen and (min-width:960px){
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      justify-content: flex-start;
+      @include borderTopStyle();
+      @include p-20pxNotRight();
+      &:nth-child(odd){
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}
+
+#organizationalChart {
+  @include p-top60px();
+  .chartImgWrap {
+    @include p-top20px();
+    @media screen and (min-width:768px){
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width:960px){
+      max-width: 1100px;
+      img {
+        max-width: 700px;
+      }
+    }
+  }
+}
