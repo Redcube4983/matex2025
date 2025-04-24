@@ -1425,6 +1425,358 @@ body [data-page-id=top] .mask-container {
   }
 }
 
+#aboutIron {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 960px) {
+  #aboutIron {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 1100px;
+    margin: 100px auto 200px;
+    padding: 0 30px;
+  }
+}
+
+.aboutIron-text-area {
+  padding: 0 15px;
+}
+@media screen and (min-width: 960px) {
+  .aboutIron-text-area {
+    padding: 15% 0 0;
+    width: 40%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .aboutIron-text-area {
+    padding: 15% 0 0;
+    width: 35%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+.moreButtonWrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 50px;
+}
+.moreButtonWrap .moreButton {
+  padding: 7.5px 20px;
+  background-color: #000;
+  border: solid 1px #000;
+  display: block;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  text-align: left;
+  -webkit-transition: background-color, border, color 1s;
+  transition: background-color, border, color 1s;
+  width: 240px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  position: relative;
+}
+.moreButtonWrap .moreButton:hover {
+  -webkit-transition: background-color, border, color 1s;
+  transition: background-color, border, color 1s;
+  background-color: #fff;
+  color: #000;
+  border: solid 1px #000;
+}
+.moreButtonWrap .moreButton:hover::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: inherit;
+  right: 20px;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: border 1s;
+  transition: border 1s;
+}
+.moreButtonWrap .moreButton::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: inherit;
+  right: 20px;
+  top: 50%;
+  display: block;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+  -webkit-transition: border 1s;
+  transition: border 1s;
+}
+@media screen and (min-width: 960px) {
+  .moreButtonWrap .moreButton {
+    border-radius: 30px;
+    color: #fff;
+    font-size: 2rem;
+    width: 280px;
+    height: 60px;
+  }
+}
+
+.aboutIron-title {
+  font-size: 5rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+@media screen and (min-width: 960px) {
+  .aboutIron-title {
+    font-size: 8rem;
+  }
+}
+
+.aboutIron-text {
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 768px) {
+  .aboutIron-text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  .aboutIron-text {
+    font-size: 1.8rem;
+  }
+}
+
+.aboutIron-image-area {
+  position: relative;
+}
+.aboutIron-image-area img {
+  width: 90%;
+  height: auto;
+  margin-left: 10%;
+  -webkit-transform: translate(-35%, -100%);
+          transform: translate(-35%, -100%);
+  opacity: 0;
+}
+.aboutIron-image-area.show img {
+  width: 90%;
+  height: auto;
+  margin-left: 10%;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  -webkit-animation: business-image 1s both 0.5s;
+          animation: business-image 1s both 0.5s;
+}
+.aboutIron-image-area.show::after {
+  position: absolute;
+  width: 15vw;
+  height: 60%;
+  display: block;
+  -webkit-transform: skewX(30deg);
+          transform: skewX(30deg);
+  background-color: rgba(233, 85, 32, 0.5);
+  content: "";
+  z-index: 2;
+  bottom: 0;
+  left: 18%;
+  -webkit-animation: business-after 1s both 1s;
+          animation: business-after 1s both 1s;
+}
+@media screen and (min-width: 960px) {
+  .aboutIron-image-area {
+    position: relative;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 60%;
+    height: auto;
+  }
+  .aboutIron-image-area img {
+    width: auto;
+    height: 100%;
+    margin-left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .aboutIron-image-area.show img {
+    width: auto;
+    height: 100%;
+    margin-left: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    -webkit-animation: business-image 1s both 0.5s;
+            animation: business-image 1s both 0.5s;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .aboutIron-image-area.show::after {
+    position: absolute;
+    width: 20%;
+    height: 60%;
+    display: block;
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    background-color: rgba(32, 233, 49, 0.5);
+    content: "";
+    z-index: 2;
+    top: 50%;
+    left: 23%;
+    -webkit-animation: business-after2 1s both 1s;
+            animation: business-after2 1s both 1s;
+  }
+  .aboutIron-image-area::before {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: "";
+    z-index: 0;
+    top: 0;
+    left: 0;
+    padding: 90% 0 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .aboutIron-image-area {
+    position: relative;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 65%;
+  }
+}
+
+@-webkit-keyframes aboutIron-after {
+  0% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 0;
+    bottom: 100%;
+    left: -28%;
+  }
+  100% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 1;
+    bottom: 0%;
+    left: 18%;
+  }
+}
+
+@keyframes aboutIron-after {
+  0% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 0;
+    bottom: 100%;
+    left: -28%;
+  }
+  100% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 1;
+    bottom: 0%;
+    left: 18%;
+  }
+}
+@-webkit-keyframes aboutIron-after2 {
+  0% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 0;
+    bottom: auto;
+    left: -28%;
+    top: -50%;
+  }
+  100% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 1;
+    bottom: auto;
+    left: 23%;
+    top: 50%;
+  }
+}
+@keyframes aboutIron-after2 {
+  0% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 0;
+    bottom: auto;
+    left: -28%;
+    top: -50%;
+  }
+  100% {
+    -webkit-transform: skewX(30deg);
+            transform: skewX(30deg);
+    opacity: 1;
+    bottom: auto;
+    left: 23%;
+    top: 50%;
+  }
+}
+@-webkit-keyframes aboutIron-image {
+  0% {
+    -webkit-transform: translate(-35%, -100%);
+            transform: translate(-35%, -100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes aboutIron-image {
+  0% {
+    -webkit-transform: translate(-35%, -100%);
+            transform: translate(-35%, -100%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
 .link-li-bg {
   position: relative;
   width: 100%;

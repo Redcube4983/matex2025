@@ -59,6 +59,7 @@
             <h3><a href="/news/">お知らせ一覧</a></h3>
             <h3><a href="/policy/">個人情報保護方針</a></h3>
             <h3><a href="/aboutusing/">サイトのご利用について</a></h3>
+            <h3><a href="/aboutiron/">鉄の魅力について</a></h3>
         </li>
     </ul>
 </div>
@@ -149,6 +150,18 @@ jQuery(function(){
       }
    })
 })
+jQuery(function(){
+   jQuery(window).scroll(function(){
+      var obj_t_pos = jQuery('.aboutIron-image-area').offset().top;
+      var scr_count = jQuery(document).scrollTop() + (window.innerHeight/2); // ディスプレイの半分の高さを追加
+      if(scr_count > obj_t_pos){
+         jQuery('.aboutIron-image-area').addClass('show');
+         jQuery('.aboutIron-image-area').fadeIn().addClass('animate');
+      }else{
+         
+      }
+   })
+})
 </script>
 <script defer src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.magnific-popup.min.js"></script>
 <script>
@@ -164,6 +177,20 @@ $(document).ready(function() {
           });
 </script>
 <?php elseif( is_page('recruit') ): ?>
+<script defer src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function() {
+            $('.popup-movie').magnificPopup({
+              disableOn: null,
+              type: 'iframe',
+              mainClass: 'mfp-fade',
+              removalDelay: 200,
+              preloader: false,
+              fixedContentPos: false
+            });
+          });
+</script>
+<?php elseif( is_page('aboutiron') ): ?>
 <script defer src="<?php echo get_template_directory_uri(); ?>/common/js/jquery.magnific-popup.min.js"></script>
 <script>
 $(document).ready(function() {

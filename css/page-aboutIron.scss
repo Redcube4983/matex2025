@@ -1,0 +1,221 @@
+@charset "UTF-8";
+
+@use '../common/css/Layout/main';
+@use '../common/css/Component/button';
+
+
+
+.aboutIron {
+    &-innerWrap {
+        margin-top: 60px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1100px;
+        margin: 60px auto 0;
+        @media screen and (min-width:768px){
+            flex-flow: nowrap;
+        }
+    }
+    &-movieArea {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        @media screen and (min-width:768px){
+            width: 48%;
+        }
+        &-inner {
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            position: absolute;
+            .movie-button {
+                display: block;
+                width: 100%;
+                height: 100%;
+                span{
+                    position: absolute;
+                    pointer-events: none;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    &::before{
+                        content: "";
+                        width: 18vw;
+                        padding-top: 100%;
+                        display: block;
+                        background-color: rgba(0,0,0,.45);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        transition: background-color 1s;
+                    }
+                    &::after{
+                        border-left: 5vw solid #fff;
+                        border-top: 3vw solid transparent;
+                        border-bottom: 3vw solid transparent;
+                        height: 0;
+                        width: 0;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-38%,-50%);
+                        pointer-events: none;
+                    }
+                }
+                &:hover{
+                    span{
+                        &::before{
+                            background-color: #e95520;
+                            transition: background-color 0s;
+                        }
+                    }
+                }
+                @media screen and (min-width:960px){
+                span{
+                    &::before {
+                        content: "";
+                        width: 10vw;
+                        padding-top: 100%;
+                        display: block;
+                        background-color: rgba(0,0,0,.45);
+                        border-radius: 50%;
+                        pointer-events: none;
+                        transition: background-color 1s;
+                    }
+                    &::after {
+                        border-left: 3vw solid #fff;
+                        border-top: 2vw solid transparent;
+                        border-bottom: 2vw solid transparent;
+                        height: 0;
+                        width: 0;
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-45%,-50%);
+                        pointer-events: none;
+                      }
+                }
+                }
+            }
+          }
+      }
+    &-textArea {
+        font-size: 1.4rem;
+        margin: 24px 30px 0;
+        @media screen and (min-width:768px){
+            font-size: 1.6rem;
+            width: 48%;
+            margin: 0;
+        }
+        @media screen and (min-width:960px){
+            font-size: 1.8rem;
+        }
+        span {
+            display: flex;
+            flex-flow: row-reverse;
+            font-size: 1.4rem;
+            margin-top: 24px;
+            @media screen and (min-width:768px){
+                font-size: 1.6rem;
+            }
+            @media screen and (min-width:960px){
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+
+
+
+.movie-play {
+    width: 15vw;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    max-width: 140px;
+}
+.movie-logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 20vw;
+}
+.movie-text-area-top{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.movie-title {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.2;
+    @media screen and (min-width:960px){
+        font-size: 3.8vw;
+    }
+}
+.movie-sub-title {
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    @media screen and (min-width:960px){
+        font-size: 1.6vw;
+    }
+}
+.movie-text-area-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+.movie-text-en {
+    position: relative;
+    font-size: 4rem;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    @media screen and (min-width:960px){
+        font-size: 7vw;
+    }
+}
+.movie-image-area {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    background-color: #aeadad;
+}
+.movie-image-inner {
+    // width: calc(100% / 3);
+    // height: 100%;
+    mix-blend-mode: multiply;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: bottom;
+        min-height: 300px;
+    }
+}
+
+
+
+
+
+
+
+
+

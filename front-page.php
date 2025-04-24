@@ -131,20 +131,20 @@ Template Name: front-page
         </div>
         </div>
     </div>
-    <div id="business">
-        <div class="business-image-area">
+    <div id="aboutIron">
+        <div class="aboutIron-image-area">
             <img src="<?php echo get_template_directory_uri(); ?>/images/front-page/aboutSteel-image.webp" alt="">
         </div>
-        <div class="business-text-area animate-right">
-        <h2 class="business-title">Movieeee</h2>
-        <p class="business-text">鉄は、古くから私たち人類の<br class="tab"><br class="pc">
+        <div class="aboutIron-text-area animate-right">
+        <h2 class="aboutIron-title">About Iron</h2>
+        <p class="aboutIron-text">鉄は、古くから私たち人類の<br class="tab"><br class="pc">
            文明発展を支えてきました。<br>
            そして、現在もなお、社会や<br class="tab"><br class="pc">
            暮らしの中で、その可能性を広げている<br>
            「古くて、新しい金属」 です。<br>
            そんな鉄の魅力を、動画でご紹介します。</p>
             <div class="moreButtonWrap">
-                    <a href="/business/" class="moreButton">more</a>
+                    <a href="/aboutiron/" class="moreButton">more</a>
             </div>
         </div>
     </div>
