@@ -1016,6 +1016,9 @@ body [data-page-id=top] .mask-container {
     opacity: 1;
   }
 }
+#recruit {
+  margin-bottom: 50px;
+}
 @media screen and (min-width: 960px) {
   #recruit {
     display: -webkit-box;
